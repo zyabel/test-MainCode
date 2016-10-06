@@ -1,3 +1,6 @@
+/*
+colors
+*/
 .position {
   max-width: 1170px;
   margin: 0 auto;
@@ -5,6 +8,11 @@
 .lato-bold {
   font-family: 'Lato';
   font-weight: 700;
+  font-style: normal;
+}
+.lato-medium {
+  font-family: 'Lato';
+  font-weight: 500;
   font-style: normal;
 }
 /*
@@ -52,7 +60,7 @@ fonts
   overflow: hidden;
 }
 .topline .topline-in a {
-  float: left;
+  vertical-align: middle;
   width: 44%;
   display: inline-block;
   margin-right: 63px;
@@ -69,12 +77,13 @@ fonts
   display: inline-block;
   float: left;
   background: url(../img/logo-pic.png) 0 0 no-repeat;
-  margin-left: 8px;
+  margin-right: 8px;
   width: 94px;
   height: 115px;
 }
 .topline .topline-in .topline-location {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   font-family: 'Lato';
   font-weight: 700;
   font-style: normal;
@@ -91,7 +100,8 @@ fonts
   float: left;
 }
 .topline .topline-in .topline-phone {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
   font-family: 'Lato';
   font-weight: 700;
@@ -109,14 +119,61 @@ fonts
 .topline .topline-in .topline-phone .hide-phone {
   font-size: 21px;
   display: none;
+  float: right;
 }
 .topline .topline-in .topline-phone p {
   font-size: 16px;
+  text-align: right;
 }
 .topline .topline-in .topline-phone p i {
   background: url(../img/arrow-small.png) 0 0 no-repeat;
   display: inline-block;
+  float: right;
   width: 17px;
   height: 17px;
-  float: right;
+  position: relative;
+  bottom: -2px;
+  margin-left: 3px;
+}
+header {
+  background-image: url(../img/bg-doctor-pic.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .nav-wrap {
+  width: 100%;
+  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+header .nav-wrap nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 19px;
+}
+header .nav-wrap nav a {
+  opacity: 1;
+  display: inline-block;
+  margin-right: 27px;
+  text-align: center;
+  padding: 19px 0;
+  text-decoration: none;
+  font-family: 'Lato';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  color: #ffffff;
+}
+header .nav-wrap nav a:hover,
+header .nav-wrap nav a:focus {
+  color: #5baed0;
+}
+header .slider-wrap .slide,
+header .slider-wrap button {
+  text-align: center;
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 29px;
 }

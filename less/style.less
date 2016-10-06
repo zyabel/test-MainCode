@@ -1,19 +1,15 @@
 @import url('variables.less');
 
-body {
-	.topline,
-	header {
 
-	}
-}
-
-.topline {
+                              
+.topline {                 										//topline
 	.topline-in {
 		.position;
 		overflow: hidden;
 		
 		a {
-			float: left;
+			display: inline-block;
+			vertical-align: middle;
 			width: 44%;
 			display: inline-block;
 			margin-right: 63px;
@@ -28,14 +24,15 @@ body {
 				display: inline-block;
 				float: left;
 				background: url(../img/logo-pic.png) 0 0 no-repeat;	
-				margin-left: 8px;
+				margin-right: 8px;
 				width: 94px;
 				height: 115px;
 			}
 		}
 
 		.topline-location {
-			float: left;
+			display: inline-block;
+			vertical-align: middle;
 			.lato-bold;
 			color: @main-grey-color;
 			font-size: 21px;
@@ -52,7 +49,8 @@ body {
 		}
 
 		.topline-phone {
-			float: left;
+			display: inline-block;
+			vertical-align: middle;
 			position: relative;
 			.lato-bold;
 			color: @main-grey-color;
@@ -69,19 +67,69 @@ body {
 			.hide-phone {
 				font-size: 21px;
 				display: none;
+				float: right;
 			}
 
 			p{
 				font-size: 16px;
+				text-align: right;
 
 				i {
 					background: url(../img/arrow-small.png) 0 0 no-repeat;	
 					display: inline-block;
+					float: right;
 					width: 17px;
 					height: 17px;
-					float: right;
+					position: relative;
+					bottom: -2px;
+					margin-left: 3px;
 				}
 			}
+		}
+	}
+}
+
+header {												//header
+	background-image: url(../img/bg-doctor-pic.jpg);
+    background-position: center center;
+    background-size: cover;  
+	background-repeat: no-repeat;
+	
+	.nav-wrap {
+		width: 100%;
+		opacity: 0.75;
+		background-color: rgba(255, 255, 255, 0.25);
+
+		nav {
+			.position;
+			padding-left: 19px;
+
+			a {
+				opacity: 1;
+				display: inline-block;				
+				margin-right: 27px;
+				text-align: center;
+				padding: 19px 0;
+				text-decoration: none;
+				.lato-medium;
+				font-size: 21px;
+				color: @main-color-white;
+
+				&:hover,
+				&:focus {
+					color: @hover-nav-a;
+				}
+			}
+		}
+	}
+
+	.slider-wrap {
+		.slide,
+		button {
+			text-align: center;
+			.lato-bold;
+			color: @main-color-white;
+			font-size: 29px;
 		}
 	}
 }
