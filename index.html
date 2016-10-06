@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1, target-densityDPI=device-dpi"/>
+	<title>MainCode Test</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+	<!-- begin topline -->
+	<div class="topline">
+		<div class="topline-in">
+			<a href="#" class="logo"><i></i>Центр Эстетической стоматологии и имплантологии
+				доктора иванова</a>
+			<div class="topline-location"><i></i>г.Харьков, 61002 Украина </br>ул. Гвардейцев 12</div>
+			<div class="topline-phone">
+				<i></i>+38 (050) 814 15 15 </br>
+		        <span class="hide-phone ">+38 (050) 814 15 15</br> +38 (050) 814 15 15</span>
+		        <p class="hide-news">посмотреть номера<i></i></p>		
+			</div>
+		</div>
+	</div>
+	<!-- end topline -->
+	<!-- begin header -->
+	<header>
+		<div class="nav-wrap">
+			<nav>
+				<a class="anchor" href="#id">О центре</a>
+				<a class="anchor" href="#id">Лечение</a>
+				<a class="anchor" href="#id">Контакты</a>
+				<a class="anchor" href="#id">Обратная связь</a>
+			</nav>
+		</div>
+		<!-- begin slider-wrap -->
+		<div class="slider-wrap">
+			<ul class="bxslider">
+			  	<li>
+			  		<!-- begin slide -->
+					<div class="slide">
+					  	<p>Харьковский стамотологический центр</p>
+					  	<h1>Центр эстетической стоматологии и имплантологии доктора Иванова</h1>
+					  	<button>Записаться на прием</button>
+					  	<span>или</span>
+					  	<button>Задать вопрос врачу</button>
+					</div>
+					<!-- end slide -->
+				</li>
+				<li>
+					<!-- begin slide -->
+					<div class="slide">
+					  	<p>Харьковский стамотологический центр</p>
+					  	<h1>Центр эстетической стоматологии и имплантологии доктора Иванова</h1>
+					  	<button>Записаться на прием</button>
+					  	<span>или</span>
+					  	<button>Задать вопрос врачу</button>
+					</div>
+					<!-- end slide -->
+				</li>
+				<li>
+					<!-- begin slide -->
+					<div class="slide">
+					  	<p>Харьковский стамотологический центр</p>
+					  	<h1>Центр эстетической стоматологии и имплантологии доктора Иванова</h1>
+					  	<button>Записаться на прием</button>
+					  	<span>или</span>
+					  	<button>Задать вопрос врачу</button>
+					</div>
+					<!-- end slide -->
+			  	</li>
+		</div>
+		<!-- end slider-wrap -->
+		<!-- begin cubes-wrap -->
+		<div class="cubes-wrap">
+			<div class="cube">
+				<p class="title">3000+</p>
+				<p>Успешно выполненных комплексных работ</p>
+			</div>
+			<div class="cube">
+				<p class="title">7</p>
+				<p>Лет на рынке.Работаем с 2009 г.</p>
+			</div>
+			<div class="cube">
+				<p class="title">13</p>
+				<p>Человек в штате,из них 5 врачей</p>
+			</div>
+			<div class="cube">
+				<p class="title">1000+</p>
+				<p>Количество постоянных клиентов</p>
+			</div>
+		</div>
+		<!-- end cubes-wrap -->
+	</header>
+	<!-- end header -->
+
+
+	<!-- Phone script -->
+	<script> 
+		$('.hide-news').click(function(){
+		  $(this).prev().toggle('fast');
+		  return false;
+		});
+	</script>
+	<!-- Slider script -->
+	<script>
+		$('.bxslider').bxSlider({
+		  auto: false,
+		  autoControls: true
+		});
+	</script>
+	<!-- Scroll script -->
+	<script>
+		$("body").on("click", "a.anchor", function(){
+		    var idtop = $($(this).attr("href")).offset().top;
+		    $('html,body').animate({scrollTop: idtop}, 500);
+		    return false;
+		});
+	</script>
+</body>
+</html>
