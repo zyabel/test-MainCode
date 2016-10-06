@@ -5,6 +5,9 @@ colors
   max-width: 1170px;
   margin: 0 auto;
 }
+/*
+fonts with styles
+*/
 .lato-bold {
   font-family: 'Lato';
   font-weight: 700;
@@ -15,8 +18,13 @@ colors
   font-weight: 500;
   font-style: normal;
 }
+.lato-regular {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+}
 /*
-fonts
+fonts original
 */
 @font-face {
   font-family: 'Lato';
@@ -54,6 +62,58 @@ fonts
   font-weight: 900;
   font-style: normal;
 }
+/*
+animation
+*/
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.item a {
+  line-height: 44px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+.item a span {
+  position: relative;
+  display: inline-block;
+  padding: 0 14px;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransforms3d .item a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  content: attr(data-hover);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+.item a:hover span,
+.item a:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+  -moz-transform: rotateX(90deg) translateY(-22px);
+  transform: rotateX(90deg) translateY(-22px);
+}
+.csstransforms3d .item a:hover span::before,
+.csstransforms3d .item a:focus span::before {
+  background: #fff;
+}
 .topline .topline-in {
   max-width: 1170px;
   margin: 0 auto;
@@ -87,7 +147,7 @@ fonts
   font-family: 'Lato';
   font-weight: 700;
   font-style: normal;
-  color: #aaaaaa;
+  color: #c3c3c3;
   font-size: 21px;
   margin-right: 33px;
 }
@@ -106,7 +166,7 @@ fonts
   font-family: 'Lato';
   font-weight: 700;
   font-style: normal;
-  color: #aaaaaa;
+  color: #c3c3c3;
   font-size: 21px;
 }
 .topline .topline-in .topline-phone i {
@@ -150,6 +210,8 @@ header .nav-wrap nav {
   max-width: 1170px;
   margin: 0 auto;
   padding-left: 19px;
+  position: fixed;
+  z-index: 1000;
 }
 header .nav-wrap nav a {
   opacity: 1;
@@ -162,7 +224,7 @@ header .nav-wrap nav a {
   font-weight: 500;
   font-style: normal;
   font-size: 21px;
-  color: #ffffff;
+  color: #fff;
 }
 header .nav-wrap nav a:hover,
 header .nav-wrap nav a:focus {
@@ -177,7 +239,7 @@ header .slider-wrap button {
   font-family: 'Lato';
   font-weight: 700;
   font-style: normal;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -196,7 +258,7 @@ header .slider-wrap p:before {
   left: 45%;
   width: 144px;
   height: 1px;
-  background: #ffffff;
+  background: #fff;
 }
 header .slider-wrap h1 {
   margin-bottom: 60px;
@@ -219,7 +281,7 @@ header .slider-wrap button:focus {
   border: 2px solid #46b6e3;
 }
 header .slider-wrap button:active {
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
 }
 header .cubes-wrap {
   position: absolute;
@@ -242,7 +304,7 @@ header .cubes-wrap .cube:nth-child(4) {
 header .cubes-wrap .cube p {
   font-family: 'Lato';
   font-style: normal;
-  color: #ffffff;
+  color: #fff;
   font-size: 17px;
   font-weight: 700;
   padding-top: 85px;
@@ -256,14 +318,267 @@ header .cubes-wrap .cube p:last-child:before {
   left: 25%;
   width: 104px;
   height: 1px;
-  background: #ffffff;
+  background: #fff;
 }
 header .cubes-wrap .cube .title {
   font-family: 'Lato';
   font-weight: 700;
   font-style: normal;
-  color: #ffffff;
+  color: #fff;
   font-size: 42px;
   font-weight: 900;
   padding-top: 21px;
+}
+.consultation-form {
+  background: #ebebeb;
+}
+.consultation-form .consultation-wrap {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 200px 0 69px 0;
+}
+.consultation-form .consultation-wrap h2 {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  color: #5baed0;
+  margin-bottom: 50px;
+}
+.consultation-form .consultation-wrap form {
+  text-align: center;
+}
+.consultation-form .consultation-wrap form input[type="text"] {
+  width: 31%;
+  background: #fff;
+  border-radius: 9px;
+  border: none;
+  padding: 21px 17px;
+  font-size: 20px;
+  text-align: left;
+  color: #c3c3c3;
+  margin: 0 32px 31px 0;
+}
+.consultation-form .consultation-wrap form input[type="submit"] {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  padding: 21px 24px;
+  color: #fff;
+  border: 2px solid #46b6e3;
+  background: #46b6e3;
+  margin: 0 auto;
+}
+.consultation-form .consultation-wrap form input[type="submit"]:hover,
+.consultation-form .consultation-wrap form input[type="submit"]:focus {
+  background: transparent;
+  border: 2px solid #46b6e3;
+  color: #46b6e3;
+}
+.consultation-form .consultation-wrap form input[type="submit"]:active {
+  border: 2px solid #46b6e3;
+}
+.info-block-wrap {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 67px;
+}
+.info-block-wrap > h2 {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 41px;
+  color: #676767;
+  margin-bottom: 43px;
+}
+.info-block-wrap .main-info {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  color: #676767;
+  line-height: 37px;
+  margin-bottom: 118px;
+  position: relative;
+}
+.info-block-wrap .main-info:before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 36%;
+  width: 307px;
+  height: 1px;
+  background: #676767;
+}
+.info-block-wrap section {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 90px;
+}
+.info-block-wrap section article {
+  display: inline-block;
+  width: 300px;
+  margin-right: 40px;
+  vertical-align: top;
+}
+.info-block-wrap section article:last-child {
+  margin-right: 40px;
+}
+.info-block-wrap section article a {
+  text-decoration: none;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  color: #676767;
+}
+.attainment-block {
+  background-image: url(../img/cabinet-pic.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.attainment-block .attainment-wrap {
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.attainment-block .attainment-wrap h2 {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  margin-top: 27px;
+}
+.attainment-block .attainment-wrap form {
+  text-align: center;
+}
+.attainment-block .attainment-wrap form input[type="submit"] {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  padding: 21px 24px;
+  color: #fff;
+  border: 2px solid #46b6e3;
+  background: #46b6e3;
+  margin: 103px auto;
+}
+.attainment-block .attainment-wrap form input[type="submit"]:hover,
+.attainment-block .attainment-wrap form input[type="submit"]:focus {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #46b6e3;
+}
+.attainment-block .attainment-wrap form input[type="submit"]:active {
+  border: 2px solid #46b6e3;
+}
+.doctors-block .doctors-wrap {
+  text-align: center;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.doctors-block .doctors-wrap > h2 {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 41px;
+  color: #676767;
+  margin: 50px 0 34px 0;
+}
+.doctors-block .doctors-wrap .main-info {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  color: #676767;
+  line-height: 37px;
+  margin-bottom: 118px;
+  position: relative;
+}
+.doctors-block .doctors-wrap .main-info:before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -32px;
+  left: 36%;
+  width: 307px;
+  height: 1px;
+  background: #676767;
+}
+.doctors-block .doctors-wrap #owl-demo .item {
+  background: #fff;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #676767;
+  text-align: center;
+  line-height: 33px;
+}
+.doctors-block .doctors-wrap #owl-demo .item a {
+  position: relative;
+  display: inline-block;
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  color: #a5a5a5;
+  text-decoration: none;
+}
+.doctors-block .doctors-wrap #owl-demo .item p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
+  color: #a5a5a5;
+}
+.location-block {
+  background-image: url(../img/map-pic.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.location-block button {
+  font-family: 'Lato';
+  font-weight: 500;
+  font-style: normal;
+  display: block;
+  font-size: 33px;
+  text-align: center;
+  padding: 21px 24px;
+  color: #676767;
+  border: 2px solid #fff;
+  background: #fff;
+  margin: 73px auto 240px;
+}
+.location-block button:hover,
+.location-block button:focus {
+  background: #676767;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.location-block button:active {
+  border: 2px solid #676767;
+}
+.footer-wrap {
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.footer-wrap footer {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.footer-wrap footer p {
+  margin: 30px 0 25px 79px;
+  color: #888;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
 }
