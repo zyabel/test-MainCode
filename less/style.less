@@ -94,10 +94,10 @@ header {												//header
     background-position: center center;
     background-size: cover;  
 	background-repeat: no-repeat;
-	
+	position: relative;
+		
 	.nav-wrap {
 		width: 100%;
-		opacity: 0.75;
 		background-color: rgba(255, 255, 255, 0.25);
 
 		nav {
@@ -124,12 +124,112 @@ header {												//header
 	}
 
 	.slider-wrap {
+		padding: 9% 0 17%;
+
 		.slide,
 		button {
 			text-align: center;
 			.lato-bold;
 			color: @main-color-white;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+
+		p {
+			font-weight: 400;
+			position: relative;
+			margin-bottom: 47px;
+			text-transform: none;
 			font-size: 29px;
+			
+			&:before {
+				display: block;
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 45%;
+				width: 144px;
+				height: 1px;
+				background: @main-color-white;
+			}			
+		}
+
+		h1 {
+			margin-bottom: 60px;
+			font-size: 35px;
+		}
+
+		span {
+			font-weight: 400;
+			padding: 0 9px;
+		}
+
+		button {
+			font-size: 25px;
+			text-align: center;
+			padding: 21px 24px;
+			border: 2px solid ;
+			background: transparent;
+
+			&:hover,
+			&:focus {
+				background: @button-bg-color;
+				border: 2px solid @button-bg-color;
+			}
+
+			&:active {
+				border: 2px solid @main-color-white;
+			}
+		}
+	}
+
+	.cubes-wrap {
+		position: absolute;
+		bottom: -119px;
+		left: 18%;
+
+		.cube {
+			box-sizing: border-box;
+			display: inline-block;
+			margin-left: -4px;
+			width: 201px;
+			height: 248px;
+			background: rgba(83, 182, 222, 0.85);
+			text-align: center;
+
+			&:nth-child(2),
+			&:nth-child(4) {
+				background: rgba(119, 197, 228, 0.85);
+			}
+
+			
+			p {
+				.lato-bold;
+				color: @main-color-white;
+				font-size: 17px;
+				font-weight: 700;
+				padding-top: 85px;
+				position: relative;
+				
+				&:last-child:before {
+					display: block;
+					content: '';
+					position: absolute;
+					bottom: -17px;
+					left: 25%;
+					width: 104px;
+					height: 1px;
+					background: @main-color-white;
+				}		
+			}		
+
+			.title {
+				.lato-bold;
+				color: @main-color-white;
+				font-size: 42px;
+				font-weight: 900;
+				padding-top: 21px;
+			}
 		}
 	}
 }

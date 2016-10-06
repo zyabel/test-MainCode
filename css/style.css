@@ -140,10 +140,10 @@ header {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 header .nav-wrap {
   width: 100%;
-  opacity: 0.75;
   background-color: rgba(255, 255, 255, 0.25);
 }
 header .nav-wrap nav {
@@ -168,6 +168,9 @@ header .nav-wrap nav a:hover,
 header .nav-wrap nav a:focus {
   color: #5baed0;
 }
+header .slider-wrap {
+  padding: 9% 0 17%;
+}
 header .slider-wrap .slide,
 header .slider-wrap button {
   text-align: center;
@@ -175,5 +178,92 @@ header .slider-wrap button {
   font-weight: 700;
   font-style: normal;
   color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .slider-wrap p {
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 47px;
+  text-transform: none;
   font-size: 29px;
+}
+header .slider-wrap p:before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 45%;
+  width: 144px;
+  height: 1px;
+  background: #ffffff;
+}
+header .slider-wrap h1 {
+  margin-bottom: 60px;
+  font-size: 35px;
+}
+header .slider-wrap span {
+  font-weight: 400;
+  padding: 0 9px;
+}
+header .slider-wrap button {
+  font-size: 25px;
+  text-align: center;
+  padding: 21px 24px;
+  border: 2px solid ;
+  background: transparent;
+}
+header .slider-wrap button:hover,
+header .slider-wrap button:focus {
+  background: #46b6e3;
+  border: 2px solid #46b6e3;
+}
+header .slider-wrap button:active {
+  border: 2px solid #ffffff;
+}
+header .cubes-wrap {
+  position: absolute;
+  bottom: -119px;
+  left: 18%;
+}
+header .cubes-wrap .cube {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: -4px;
+  width: 201px;
+  height: 248px;
+  background: rgba(83, 182, 222, 0.85);
+  text-align: center;
+}
+header .cubes-wrap .cube:nth-child(2),
+header .cubes-wrap .cube:nth-child(4) {
+  background: rgba(119, 197, 228, 0.85);
+}
+header .cubes-wrap .cube p {
+  font-family: 'Lato';
+  font-style: normal;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  padding-top: 85px;
+  position: relative;
+}
+header .cubes-wrap .cube p:last-child:before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -17px;
+  left: 25%;
+  width: 104px;
+  height: 1px;
+  background: #ffffff;
+}
+header .cubes-wrap .cube .title {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 900;
+  padding-top: 21px;
 }
