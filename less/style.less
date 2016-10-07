@@ -323,7 +323,7 @@ header {												//header
 		}	
 	}
 
-	section {
+	.section {
 		overflow: hidden;
 		text-align: center;
 		margin-bottom: 90px;
@@ -497,11 +497,75 @@ header {												//header
 
 		p {
 			margin: 30px 0 25px 79px;
+			float: left;
 			color: #888;
 			.lato-regular;
 			font-weight: 400;
     		font-style: italic;
     		font-size: 21px;
 		}
+
+		ul {
+			float: right;
+			margin: 26px 37px 0 0;
+			list-style: none;
+
+			li {
+				display: inline-block;
+				margin-right: 5px;
+			}
+
+			.twit {
+			    left: 0px;
+			    width: 23px;
+			    height: 23px;
+			    background: url('../img/sprite.jpg') 0 0;
+				
+				& a:hover {
+			    	background: url('../img/sprite.jpg') 0 -23px;
+				}
+
+				a {
+					display: block;
+					height: 23px;
+				}
+			}
+
+			.inst {
+			    left: 23px;
+			    width: 23px;
+			    height: 23px;
+			    background: url('../img/sprite.jpg') -23px 0;
+				
+				& a:hover {
+			    	background: url('../img/sprite.jpg') -23px -23px;
+				}
+
+				a {
+					display: block;
+					height: 23px;
+				}
+			}
+
+			.face {
+			    left: 46px;
+			    width: 23px;
+			    height: 23px;
+			    background: url('../img/sprite.jpg') -46px 0;
+				
+				& a:hover {
+			    	background: url('../img/sprite.jpg') -46px -23px;
+				}
+
+				a {
+					display: block;
+					height: 23px;
+				}
+			}
+		}
 	}
 }
+
+/*.doctor-info-block {
+	display: none;	
+}*/
