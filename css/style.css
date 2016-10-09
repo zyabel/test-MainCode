@@ -114,10 +114,20 @@ animation
 .csstransforms3d .item a:focus span::before {
   background: #fff;
 }
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 16.5px;
+  }
+}
 .topline .topline-in {
   max-width: 1170px;
   margin: 0 auto;
   overflow: hidden;
+}
+@media only screen and (max-width: 750px) {
+  .topline .topline-in {
+    display: none;
+  }
 }
 .topline .topline-in a {
   vertical-align: middle;
@@ -133,6 +143,18 @@ animation
   text-transform: uppercase;
   line-height: 1.56em;
 }
+@media only screen and (max-width: 1150px) {
+  .topline .topline-in a {
+    width: 100%;
+    margin-left: 15px;
+    display: block;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topline .topline-in a {
+    display: inline;
+  }
+}
 .topline .topline-in a i {
   display: inline-block;
   float: left;
@@ -140,6 +162,18 @@ animation
   margin-right: 8px;
   width: 94px;
   height: 115px;
+}
+@media only screen and (max-width: 1150px) {
+  .topline .topline-in a span {
+    display: inline-block;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .topline .topline-in a span {
+    width: 75%;
+  }
 }
 .topline .topline-in .topline-location {
   display: inline-block;
@@ -150,6 +184,18 @@ animation
   color: #c3c3c3;
   font-size: 21px;
   margin-right: 33px;
+}
+@media only screen and (max-width: 1150px) {
+  .topline .topline-in .topline-location {
+    width: 30%;
+    margin: 10px 50px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topline .topline-in .topline-location {
+    width: 50%;
+    margin: 25px 0;
+  }
 }
 .topline .topline-in .topline-location i {
   background: url(../img/location-pic.png) 0 0 no-repeat;
@@ -168,6 +214,17 @@ animation
   font-style: normal;
   color: #c3c3c3;
   font-size: 21px;
+}
+@media only screen and (max-width: 1150px) {
+  .topline .topline-in .topline-phone {
+    width: 234px;
+    margin: 10px 50px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topline .topline-in .topline-phone {
+    margin: 0;
+  }
 }
 .topline .topline-in .topline-phone i {
   background: url(../img/phone-pic.png) 0 0 no-repeat;
@@ -204,16 +261,24 @@ header {
 }
 header .nav-wrap {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.25);
 }
 header .nav-wrap nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+header .nav-wrap nav .nav-inner {
   max-width: 1170px;
   margin: 0 auto;
   padding-left: 19px;
-  position: fixed;
-  z-index: 1000;
 }
-header .nav-wrap nav a {
+@media only screen and (max-width: 750px) {
+  header .nav-wrap nav .nav-inner {
+    display: none;
+  }
+}
+header .nav-wrap nav .nav-inner a {
   opacity: 1;
   display: inline-block;
   margin-right: 27px;
@@ -226,12 +291,22 @@ header .nav-wrap nav a {
   font-size: 21px;
   color: #fff;
 }
-header .nav-wrap nav a:hover,
-header .nav-wrap nav a:focus {
+header .nav-wrap nav .nav-inner a:hover,
+header .nav-wrap nav .nav-inner a:focus {
   color: #5baed0;
 }
 header .slider-wrap {
   padding: 9% 0 17%;
+}
+@media only screen and (max-width: 950px) {
+  header .slider-wrap {
+    padding: 10% 0;
+  }
+}
+@media only screen and (max-width: 780px) {
+  header .slider-wrap {
+    padding: 85px 0 7%;
+  }
 }
 header .slider-wrap .slide,
 header .slider-wrap button {
@@ -250,6 +325,16 @@ header .slider-wrap p {
   text-transform: none;
   font-size: 29px;
 }
+@media only screen and (max-width: 780px) {
+  header .slider-wrap p {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .slider-wrap p {
+    font-size: 16.5px;
+  }
+}
 header .slider-wrap p:before {
   display: block;
   content: '';
@@ -264,9 +349,27 @@ header .slider-wrap h1 {
   margin-bottom: 60px;
   font-size: 35px;
 }
+@media only screen and (max-width: 780px) {
+  header .slider-wrap h1 {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .slider-wrap h1 {
+    font-size: 16.5px;
+    width: 75%;
+    margin: 0 auto 60px;
+  }
+}
 header .slider-wrap span {
   font-weight: 400;
   padding: 0 9px;
+}
+@media only screen and (max-width: 780px) {
+  header .slider-wrap span {
+    display: block;
+    margin: 12px 0;
+  }
 }
 header .slider-wrap button {
   font-size: 25px;
@@ -274,6 +377,16 @@ header .slider-wrap button {
   padding: 21px 24px;
   border: 2px solid ;
   background: transparent;
+}
+@media only screen and (max-width: 780px) {
+  header .slider-wrap button {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  header .slider-wrap button {
+    font-size: 15px;
+  }
 }
 header .slider-wrap button:hover,
 header .slider-wrap button:focus {
@@ -287,6 +400,11 @@ header .cubes-wrap {
   position: absolute;
   bottom: -119px;
   left: 18%;
+}
+@media only screen and (max-width: 980px) {
+  header .cubes-wrap {
+    display: none;
+  }
 }
 header .cubes-wrap .cube {
   box-sizing: border-box;
@@ -337,6 +455,11 @@ header .cubes-wrap .cube .title {
   margin: 0 auto;
   padding: 200px 0 69px 0;
 }
+@media only screen and (max-width: 980px) {
+  .consultation-form .consultation-wrap {
+    padding: 45px 0 54px 0;
+  }
+}
 .consultation-form .consultation-wrap h2 {
   font-family: 'Lato';
   font-weight: 700;
@@ -345,6 +468,11 @@ header .cubes-wrap .cube .title {
   text-align: center;
   color: #5baed0;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 980px) {
+  .consultation-form .consultation-wrap h2 {
+    margin-bottom: 30px;
+  }
 }
 .consultation-form .consultation-wrap form {
   text-align: center;
@@ -360,8 +488,14 @@ header .cubes-wrap .cube .title {
   color: #c3c3c3;
   margin: 0 32px 31px 0;
 }
-.consultation-form .consultation-wrap form input[type="submit"] {
-  display: block;
+@media only screen and (max-width: 980px) {
+  .consultation-form .consultation-wrap form input[type="text"] {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+.consultation-form .consultation-wrap form .submit,
+.consultation-form .consultation-wrap form .hide-submit {
   font-size: 25px;
   text-align: center;
   padding: 21px 24px;
@@ -370,20 +504,41 @@ header .cubes-wrap .cube .title {
   background: #46b6e3;
   margin: 0 auto;
 }
-.consultation-form .consultation-wrap form input[type="submit"]:hover,
-.consultation-form .consultation-wrap form input[type="submit"]:focus {
+.consultation-form .consultation-wrap form .submit:hover,
+.consultation-form .consultation-wrap form .hide-submit:hover,
+.consultation-form .consultation-wrap form .submit:focus,
+.consultation-form .consultation-wrap form .hide-submit:focus {
   background: transparent;
   border: 2px solid #46b6e3;
   color: #46b6e3;
 }
-.consultation-form .consultation-wrap form input[type="submit"]:active {
+.consultation-form .consultation-wrap form .submit:active,
+.consultation-form .consultation-wrap form .hide-submit:active {
   border: 2px solid #46b6e3;
+}
+.consultation-form .consultation-wrap form .hide-submit {
+  display: none;
+}
+@media only screen and (max-width: 550px) {
+  .consultation-form .consultation-wrap form .hide-submit {
+    display: block;
+    margin-top: 20px;
+    font-size: 16.5px;
+    padding: 12px 15px;
+  }
+}
+.consultation-form .consultation-wrap form .submit {
+  display: block;
+}
+@media only screen and (max-width: 550px) {
+  .consultation-form .consultation-wrap form .submit {
+    display: none;
+  }
 }
 .info-block-wrap {
   max-width: 1170px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 67px;
 }
 .info-block-wrap > h2 {
   font-family: 'Lato';
@@ -391,7 +546,13 @@ header .cubes-wrap .cube .title {
   font-style: normal;
   font-size: 41px;
   color: #676767;
-  margin-bottom: 43px;
+  margin: 67px 0 43px;
+}
+@media only screen and (max-width: 550px) {
+  .info-block-wrap > h2 {
+    font-size: 25px;
+    margin: 33px 0 21px;
+  }
 }
 .info-block-wrap .main-info {
   font-family: 'Lato';
@@ -413,6 +574,21 @@ header .cubes-wrap .cube .title {
   height: 1px;
   background: #676767;
 }
+@media only screen and (max-width: 550px) {
+  .info-block-wrap .main-info {
+    font-size: 12.5px;
+    line-height: 15px;
+    padding: 0 10px;
+  }
+  .info-block-wrap .main-info:before {
+    left: 36%;
+    width: 86px;
+    bottom: -25px;
+  }
+  .info-block-wrap .main-info span {
+    display: none;
+  }
+}
 .info-block-wrap .section {
   overflow: hidden;
   text-align: center;
@@ -423,6 +599,12 @@ header .cubes-wrap .cube .title {
   width: 300px;
   margin-right: 40px;
   vertical-align: top;
+}
+@media only screen and (max-width: 1030px) {
+  .info-block-wrap .section article:nth-child(3),
+  .info-block-wrap .section article:nth-child(6) {
+    display: none;
+  }
 }
 .info-block-wrap .section article:last-child {
   margin-right: 40px;
@@ -517,6 +699,10 @@ header .cubes-wrap .cube .title {
   color: #676767;
   text-align: center;
   line-height: 33px;
+}
+.doctors-block .doctors-wrap #owl-demo .item img {
+  display: block;
+  margin: 0 auto;
 }
 .doctors-block .doctors-wrap #owl-demo .item a {
   position: relative;

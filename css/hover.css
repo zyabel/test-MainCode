@@ -21,6 +21,7 @@
    padding: 22px 17px;
 }
 .view img {
+   width: 100%;
    display: block;
    position: relative;
 }

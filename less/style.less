@@ -6,6 +6,10 @@
 	.topline-in {
 		.position;
 		overflow: hidden;
+
+		@media only screen and (max-width: 750px) {
+			display: none;
+		}
 		
 		a {
 			display: inline-block;
@@ -19,7 +23,17 @@
 			font-size: 1.31em;
 			text-transform: uppercase;
 			line-height: 1.56em;
-	
+
+			@media only screen and (max-width:1150px) {
+				width: 100%;
+				margin-left: 15px;
+				display: block;
+			}
+
+			@media only screen and (max-width: 980px) {
+				display: inline;
+			}
+
 			i {
 				display: inline-block;
 				float: left;
@@ -27,6 +41,19 @@
 				margin-right: 8px;
 				width: 94px;
 				height: 115px;
+			}
+
+			span {
+				@media only screen and (max-width:1150px) {
+					display: inline-block;
+					margin: 20px 0;
+					text-align: center;
+				}
+
+
+				@media only screen and (max-width:1080px) {
+					width: 75%;
+				}
 			}
 		}
 
@@ -37,6 +64,16 @@
 			color: @main-grey-color;
 			font-size: 21px;
 			margin-right: 33px;
+
+			@media only screen and (max-width:1150px) {
+				width: 30%;
+				margin: 10px 50px;
+			}
+
+			@media only screen and (max-width:980px) {
+				width: 50%;
+			    margin: 25px 0;
+			}
 
 			i {
 				background: url(../img/location-pic.png) 0 0 no-repeat;	
@@ -55,6 +92,15 @@
 			.lato-bold;
 			color: @main-grey-color;
 			font-size: 21px;
+
+			@media only screen and (max-width:1150px) {
+				width: 234px;
+				margin: 10px 50px;
+			}
+
+			@media only screen and (max-width:980px) {
+				margin: 0;
+			}
 
 			i {
 				background: url(../img/phone-pic.png) 0 0 no-repeat;	
@@ -98,28 +144,36 @@ header {												//header
 		
 	.nav-wrap {
 		width: 100%;
-		background-color: rgba(255, 255, 255, 0.25);
-
+		
 		nav {
-			.position;
-			padding-left: 19px;
 			position: fixed;
 			z-index: 1000;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.25);
 
-			a {
-				opacity: 1;
-				display: inline-block;				
-				margin-right: 27px;
-				text-align: center;
-				padding: 19px 0;
-				text-decoration: none;
-				.lato-medium;
-				font-size: 21px;
-				color: @main-color-white;
+			.nav-inner{
+				.position;
+				padding-left: 19px;
 
-				&:hover,
-				&:focus {
-					color: @hover-nav-a;
+				@media only screen and (max-width: 750px) {
+					display: none;
+				}
+
+				a {
+					opacity: 1;
+					display: inline-block;				
+					margin-right: 27px;
+					text-align: center;
+					padding: 19px 0;
+					text-decoration: none;
+					.lato-medium;
+					font-size: 21px;
+					color: @main-color-white;
+
+					&:hover,
+					&:focus {
+						color: @hover-nav-a;
+					}
 				}
 			}
 		}
@@ -127,6 +181,15 @@ header {												//header
 
 	.slider-wrap {										//slider										
 		padding: 9% 0 17%;
+
+		@media only screen and (max-width: 950px) {
+	        padding: 10% 0;
+	    }
+		
+		@media only screen and (max-width: 780px) {
+	        padding: 85px 0 7%;
+	    }
+
 
 		.slide,
 		button {
@@ -143,6 +206,14 @@ header {												//header
 			margin-bottom: 47px;
 			text-transform: none;
 			font-size: 29px;
+
+			@media only screen and (max-width: 780px) {
+		        font-size: 21px;
+		    }
+
+		    @media only screen and (max-width: 500px) {
+		        font-size: 16.5px;
+		    }
 			
 			&:before {
 				display: block;
@@ -159,11 +230,27 @@ header {												//header
 		h1 {
 			margin-bottom: 60px;
 			font-size: 35px;
+
+			@media only screen and (max-width: 780px) {
+		        font-size: 21px;
+		    }
+
+		    @media only screen and (max-width: 500px) {
+		        font-size: 16.5px;
+		        width: 75%;
+    			margin: 0 auto 60px
+		    }
+
 		}
 
 		span {
 			font-weight: 400;
 			padding: 0 9px;
+
+			@media only screen and (max-width: 780px) {
+		        display: block;
+		        margin: 12px 0;
+			}
 		}
 
 		button {
@@ -172,6 +259,14 @@ header {												//header
 			padding: 21px 24px;
 			border: 2px solid ;
 			background: transparent;
+
+			@media only screen and (max-width: 780px) {
+		        font-size: 21px;
+		    }
+
+		    @media only screen and (max-width: 780px) {
+		        font-size: 15px;
+		    }
 
 			&:hover,
 			&:focus {
@@ -189,6 +284,10 @@ header {												//header
 		position: absolute;
 		bottom: -119px;
 		left: 18%;
+
+		@media only screen and (max-width:980px) {
+			display: none;
+		}
 
 		.cube {
 			box-sizing: border-box;
@@ -236,19 +335,26 @@ header {												//header
 	}
 }
 
-.consultation-form {
+.consultation-form {											//consultation block
 	background: @form-bg-color;
 	
 	.consultation-wrap {
 		.position;
 		padding: 200px 0 69px 0;
 
+		@media only screen  and (max-width: 980px) {
+			padding: 45px 0 54px 0;
+		}
 		h2 {
 			.lato-bold;
 			font-size: 25px;
 			text-align: center;
 			color: @hover-nav-a;
-			margin-bottom: 50px;	
+			margin-bottom: 50px;
+
+			@media only screen  and (max-width: 980px) {
+				margin-bottom: 30px;
+			}
 		}
 		
 		form {
@@ -264,10 +370,15 @@ header {												//header
 				text-align: left;
 				color: @main-grey-color;
 				margin:0 32px 31px 0;
+
+				@media only screen  and (max-width: 980px) {
+					width: 80%;
+					margin: 10px auto;
+				}
 			}
 
-			input[type="submit"] {
-				display: block;
+			.submit,
+			.hide-submit {				
 				font-size: 25px;
 				text-align: center;
 				padding: 21px 24px;
@@ -285,7 +396,26 @@ header {												//header
 
 				&:active {
 					border: 2px solid @button-bg-color;
-				}
+				}						
+			}
+
+			.hide-submit {
+				display: none;
+
+				@media only screen  and (max-width: 550px) {
+					display: block;
+					margin-top: 20px;
+					font-size: 16.5px;
+					padding: 12px 15px;
+				}		
+			}
+
+			.submit {
+				display: block;
+
+				@media only screen  and (max-width: 550px) {
+					display: none;
+				}		
 			}
 		}
 	}
@@ -294,13 +424,17 @@ header {												//header
 .info-block-wrap {
 	.position;
 	text-align: center;
-	padding-top: 67px;
 
 	& > h2 {
 		.lato-bold;
 		font-size: 41px;
 		color: @title-darkgrey-color;
-		margin-bottom: 43px
+		margin: 67px 0 43px;
+
+		@media only screen  and (max-width: 550px) {
+			font-size: 25px;
+			margin: 33px 0 21px;
+		}
 	}
 
 	.main-info {
@@ -320,6 +454,23 @@ header {												//header
 			width: 307px;
 			height: 1px;
 			background: @title-darkgrey-color;
+		}
+
+
+		@media only screen  and (max-width: 550px) {
+			font-size: 12.5px;
+			line-height: 15px;
+			padding: 0 10px;
+
+			&:before {
+				left: 36%;
+				width: 86px;
+				bottom: -25px;
+			}
+
+			span {
+				display: none;
+			}
 		}	
 	}
 
@@ -333,6 +484,13 @@ header {												//header
 	   		width: 300px;
 	   		margin-right: 40px;
 			vertical-align: top;
+
+			&:nth-child(3),
+			&:nth-child(6) {
+				@media only screen and (max-width:1030px) {
+					display: none;
+				}
+			}
 
 	   		&:last-child {
 	   			margin-right: 40px;	
@@ -348,7 +506,7 @@ header {												//header
 	}
 }
 
-.attainment-block {
+.attainment-block {												//attainment block
 	background-image: url(../img/cabinet-pic.jpg);
     background-position: center center;
     background-size: cover;  
@@ -393,7 +551,7 @@ header {												//header
 	}
 }
 
-.doctors-block {
+.doctors-block {									//slider with doctors
 
 	.doctors-wrap {
 		text-align: center;
@@ -434,6 +592,11 @@ header {												//header
 		    text-align: center;
 		    line-height: 33px;
 
+		    img {
+		    	display: block;
+		    	margin: 0 auto;
+		    }
+
 		    a {
 		    	position: relative;
 				display: inline-block;
@@ -457,7 +620,7 @@ header {												//header
 	}
 }
 
-.location-block {
+.location-block {									//  map block
 	background-image: url(../img/map-pic.jpg);
     background-position: center center;
 	background-repeat: no-repeat;

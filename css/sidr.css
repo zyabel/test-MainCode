@@ -1,0 +1,56 @@
+#sidr-main{
+    display: none;
+    position: fixed;
+    top: 57px;
+    z-index: 10000;
+    width: 200px;
+    overflow-x:none;
+    overflow-y: auto;
+    height: 100%;    
+    margin-right: -200px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+#sidr-main a{
+    display: block;
+    font-family: 'Lato';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px;
+    color: #5baed0;
+    text-decoration: none;
+    padding: 15px 2.2% 15px 7%;
+    position: relative;
+}
+#sidr-main a:hover{
+    text-decoration: underline; 
+}
+/*.button,*/
+.wrap-button{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px;
+    width: 100%;
+}
+.button img{
+    height: auto;
+}
+#sidr-main a#sidr-id-responsive-menu-button img{
+    display: none;
+}
+
+@media only screen  and (max-width: 750px) {
+    /*.button,*/
+    .wrap-button {
+       display: block;
+       top: 0;
+       left: 0;
+    }
+    .wrap-button {
+        background-color: rgba(255, 255, 255, 0.25);
+        padding: 15px;
+    }
+
+}
